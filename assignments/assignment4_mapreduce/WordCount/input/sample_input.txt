@@ -1,0 +1,7 @@
+Hello Hadoop MapReduce
+Big Data is amazing
+Hadoop runs on distributed systems
+MapReduce is a programming model for Big Data
+Apache Hadoop is an open source framework
+Big Data systems process large volumes of data
+Hadoop uses MapReduce for parallel processing
