@@ -1,8 +1,8 @@
 # Assignment 3: Fundamental HDFS Commands
 
 > **Subject:** Big Data  
-> **Student Name:** YOUR_NAME_HERE  
-> **Enrollment No:** YOUR_ENROLLMENT_HERE
+> **Student Name:** Arin Zingade  
+> **Enrollment No:** 0801IT221035
 
 ---
 
@@ -31,14 +31,14 @@ Demonstrate the fundamental HDFS (Hadoop Distributed File System) shell commands
 **Syntax:** `hdfs dfs -mkdir <hdfs-path>`
 
 ```bash
-hdfs dfs -mkdir /assignment3_YOUR_ENROLLMENT_HERE
+hdfs dfs -mkdir /assignment3_0801IT221055
 hdfs dfs -ls /
 ```
 
 **Output:**
 ```
 Found 1 items
-drwxr-xr-x   -  kanishka  supergroup   0  /assignment3_YOUR_ENROLLMENT_HERE
+drwxr-xr-x   -  kanishka  supergroup   0  /assignment3_0801IT221055
 ```
 
 > **Explanation:** The `-mkdir` flag creates a directory in the HDFS namespace, similar to the Linux `mkdir` command. The `-ls /` lists the root of HDFS to confirm creation.
@@ -54,16 +54,16 @@ drwxr-xr-x   -  kanishka  supergroup   0  /assignment3_YOUR_ENROLLMENT_HERE
 echo "Hello Hadoop Assignment" > file.txt
 
 # Upload to HDFS
-hdfs dfs -put file.txt /assignment3_YOUR_ENROLLMENT_HERE
+hdfs dfs -put file.txt /assignment3_0801IT221055
 
 # Verify
-hdfs dfs -ls /assignment3_YOUR_ENROLLMENT_HERE
+hdfs dfs -ls /assignment3_0801IT221055
 ```
 
 **Output:**
 ```
 Found 1 items
--rw-r--r--   1  kanishka  supergroup   24  /assignment3_YOUR_ENROLLMENT_HERE/file.txt
+-rw-r--r--   1  kanishka  supergroup   24  /assignment3_0801IT221055/file.txt
 ```
 
 > **Explanation:** The `-put` command transfers a local file into HDFS. The file is replicated across DataNodes as configured in `hdfs-site.xml`.
@@ -75,7 +75,7 @@ Found 1 items
 **Syntax:** `hdfs dfs -cat <hdfs-path>`
 
 ```bash
-hdfs dfs -cat /assignment3_YOUR_ENROLLMENT_HERE/file.txt
+hdfs dfs -cat /assignment3_0801IT221055/file.txt
 ```
 
 **Output:**
@@ -92,7 +92,7 @@ Hello Hadoop Assignment
 **Syntax:** `hdfs dfs -get <hdfs-path> <local-path>`
 
 ```bash
-hdfs dfs -get /assignment3_YOUR_ENROLLMENT_HERE/file.txt downloaded.txt
+hdfs dfs -get /assignment3_0801IT221055/file.txt downloaded.txt
 
 # Verify locally
 ls -lh downloaded.txt
@@ -115,15 +115,15 @@ Hello Hadoop Assignment
 **Syntax:** `hdfs dfs -rm <hdfs-path>`
 
 ```bash
-hdfs dfs -rm /assignment3_YOUR_ENROLLMENT_HERE/file.txt
+hdfs dfs -rm /assignment3_0801IT221055/file.txt
 
 # Verify deletion
-hdfs dfs -ls /assignment3_YOUR_ENROLLMENT_HERE
+hdfs dfs -ls /assignment3_0801IT221055
 ```
 
 **Output:**
 ```
-Deleted /assignment3_YOUR_ENROLLMENT_HERE/file.txt
+Deleted /assignment3_0801IT221055/file.txt
 ```
 
 > **Explanation:** The `-rm` command removes a file from HDFS. After deletion, the directory listing confirms the file is gone.

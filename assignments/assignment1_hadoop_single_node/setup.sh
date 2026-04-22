@@ -2,15 +2,15 @@
 # ============================================================
 # Assignment 1: Hadoop Single Node Cluster Installation
 # ============================================================
-# Student Name  : YOUR_NAME_HERE
-# Enrollment No : YOUR_ENROLLMENT_HERE
+# Student Name  : Arin Zingade
+# Enrollment No : 0801IT221035
 # Subject       : Big Data
 # ============================================================
 
 echo "========================================================"
 echo "  Big Data Assignment 1 - Hadoop Single Node Setup"
-echo "  Student : YOUR_NAME_HERE"
-echo "  Enroll  : YOUR_ENROLLMENT_HERE"
+echo "  Student : Arin Zingade"
+echo "  Enroll  : 0801IT221035"
 echo "========================================================"
 echo ""
 

@@ -1,8 +1,8 @@
 # Assignment 4: MapReduce Programming with Java
 
 > **Subject:** Big Data  
-> **Student Name:** YOUR_NAME_HERE  
-> **Enrollment No:** YOUR_ENROLLMENT_HERE
+> **Student Name:** Arin Zingade  
+> **Enrollment No:** 0801IT221035
 
 ---
 

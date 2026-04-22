@@ -1,7 +1,7 @@
 # Big Data Assignments
 
-> **Student Name:** YOUR_NAME_HERE  
-> **Enrollment No:** YOUR_ENROLLMENT_HERE  
+> **Student Name:** Arin Zingade  
+> **Enrollment No:** 0801IT221035  
 > **Subject:** Big Data
 
 ---
@@ -12,8 +12,8 @@ Before running any script, replace the placeholders in each file:
 
 | Placeholder            | Replace with           |
 |------------------------|------------------------|
-| `YOUR_NAME_HERE`       | Your full name         |
-| `YOUR_ENROLLMENT_HERE` | Your enrollment number |
+| `Arin Zingade`       | Your full name         |
+| `0801IT221035` | Your enrollment number |
 
 ---
 

@@ -1,0 +1,90 @@
+# ============================================================
+# docker-compose.yml: Hadoop Multi-Node Cluster
+# Uses pre-built bde2020 Hadoop images — no build needed!
+# ============================================================
+# Assignment 2 - Big Data
+# Student Name  : Arin Zingade
+# Enrollment No : 0801IT221035
+# ============================================================
+# Usage:
+#   docker compose up -d
+#   docker exec -it namenode bash
+# ============================================================
+
+services:
+
+  # ── NameNode (Master - HDFS)
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: namenode
+    hostname: namenode
+    restart: always
+    ports:
+      - "9870:9870"   # HDFS NameNode Web UI → http://localhost:9870
+      # port 9000 (HDFS IPC) is internal-only between containers
+    environment:
+      - CLUSTER_NAME=big-data-cluster
+    env_file:
+      - .env
+    volumes:
+      - namenode_data:/hadoop/dfs/name
+    networks:
+      - hadoop-net
+
+  # ── DataNode (Worker - HDFS)
+  datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: datanode
+    hostname: datanode
+    restart: always
+    ports:
+      - "9864:9864"   # DataNode Web UI → http://localhost:9864
+    env_file:
+      - .env
+    volumes:
+      - datanode_data:/hadoop/dfs/data
+    networks:
+      - hadoop-net
+    depends_on:
+      - namenode
+
+  # ── ResourceManager (Master - YARN)
+  resourcemanager:
+    image: bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8
+    container_name: resourcemanager
+    hostname: resourcemanager
+    restart: always
+    ports:
+      - "8088:8088"   # YARN Resource Manager Web UI → http://localhost:8088
+    env_file:
+      - .env
+    networks:
+      - hadoop-net
+    depends_on:
+      - namenode
+      - datanode
+
+  # ── NodeManager (Worker - YARN)
+  nodemanager:
+    image: bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8
+    container_name: nodemanager
+    hostname: nodemanager
+    restart: always
+    ports:
+      - "8042:8042"   # NodeManager Web UI → http://localhost:8042
+    env_file:
+      - .env
+    networks:
+      - hadoop-net
+    depends_on:
+      - namenode
+      - datanode
+      - resourcemanager
+
+volumes:
+  namenode_data:
+  datanode_data:
+
+networks:
+  hadoop-net:
+    driver: bridge

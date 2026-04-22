@@ -1,8 +1,8 @@
 // ============================================================
 // Assignment 4 - Q2: Anagram Finder using MapReduce
 // ============================================================
-// Student Name  : YOUR_NAME_HERE
-// Enrollment No : YOUR_ENROLLMENT_HERE
+// Student Name  : Arin Zingade
+// Enrollment No : 0801IT221035
 // Subject       : Big Data
 // ============================================================
 
@@ -77,8 +77,8 @@ public class Anagram {
 
         System.out.println("========================================");
         System.out.println("  Anagram Finder MapReduce");
-        System.out.println("  Student : YOUR_NAME_HERE");
-        System.out.println("  Enroll  : YOUR_ENROLLMENT_HERE");
+        System.out.println("  Student : Arin Zingade");
+        System.out.println("  Enroll  : 0801IT221035");
         System.out.println("========================================");
 
         if (args.length != 2) {
